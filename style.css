@@ -1,0 +1,112 @@
+/* Variables CSS para colores y tamaños */
+:root {
+    --color-fondo: #f4f4f4;
+    --color-blanco: #ffffff;
+    --color-borde: #e0e0e0;
+    --color-primario: #007bff;
+    --color-hover: #0056b3;
+    --color-texto: #333;
+    --color-texto-secundario: #555;
+    --radio-borde: 8px;
+    --sombra: rgba(0, 0, 0, 0.1);
+    --fuente-base: Arial, sans-serif;
+    --tamano-fuente-base: 14px;
+}
+
+/* Establecemos el fondo y la fuente base global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-base);
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    font-size: var(--tamano-fuente-base);
+    line-height: 1.6;
+}
+
+/* Estilo general para contenedores */
+.container {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    padding: 20px;
+    box-shadow: 0 2px 8px var(--sombra);
+    max-width: 900px;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+/* Títulos dentro de los contenedores */
+h1 {
+    font-size: 24px;
+    color: var(--color-texto);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo para las tablas */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.responsive-table th, .responsive-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--color-borde);
+}
+
+.responsive-table th {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+.responsive-table td {
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+}
+
+.responsive-table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Estilo de las imágenes */
+.responsive-img {
+    max-width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .responsive-table th, .responsive-table td {
+        padding: 10px;
+    }
+
+    .responsive-img {
+        max-width: 60px;
+    }
+}
